@@ -1,0 +1,99 @@
+// Required to use nib
+@import 'nib'
+
+//Grab a custom font from Google
+@import url('http://fonts.googleapis.com/css?family=Quicksand')
+
+//Nib provides a CSS reset which is to reduce browser inconsistencies
+global-reset()
+
+//Store the main colour and background colour as variables
+main-color = #fa5b4d
+background-color = #faf9f0
+
+body
+  font-family 'Georgia'
+  background-color background-color
+  color #444
+
+header
+  font-family 'Quicksand'
+  padding 50px 10px
+  color #fff
+  font-size 25px
+  text-align center
+
+  //Note the use of main-color variable and the darken function
+  background-color main-color
+  border-bottom 1px solid darken(main-color, 30%)
+  text-shadow 0px -1px 0px darken(main-color, 30%)
+
+p
+  line-height 1.8
+
+.container
+  width 980px
+  margin 50px auto
+  overflow hidden
+
+.main-content
+  float left
+  width 631px
+
+  p
+    margin-bottom 20px
+
+.sidebar
+  float right
+  width 301px
+
+  .widget
+    //vendor prefixes are automatically added by nib below
+    border-radius 3px
+    border 1px solid #ccc
+    background-color background-color
+    box-shadow inset 0px 0px 0px 3px rgba(#fff, 0.8), 0px 3px 0px -2px rgba(#000, 0.1)
+
+    h1
+      font-family 'Quicksand'
+      margin 13px 10px 4px
+      padding-bottom 10px
+      border-bottom 1px dotted #ddd
+      border-radius 2px 2px 0px 0px
+      margin-bottom 10px
+
+    p
+      font-size 13px
+      padding 0px 10px
+      margin-bottom 10px
+
+    #smoothiecanvas
+      width 300px
+      height 150px
+      border-radius 3px
+
+    #conversation
+      //scrollable box when max height is reached
+      max-height 333px
+      overflow auto
+      overflow-x hidden
+      padding 5px 5px
+      word-wrap break-word
+    #padding
+      padding 5px 5px
+      #data
+        width 97.5%
+        resize none
+        font-family 'Georgia'
+        font-size 16px
+ 
+
+
+footer
+  width 980px
+  margin 50px auto
+  border-top 1px dotted #ccc
+  padding-top 5px
+  font-size 13px
+
+

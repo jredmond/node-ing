@@ -1,0 +1,20 @@
+doctype 5
+html
+  head
+    title #{title} - My site
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    //Load in scripts that were passed from res.render in routes
+    - each script in scripts
+      script(type='text/javascript', src= script)
+      
+  body
+    header
+      h1 John
+    .container
+      .main-content
+        block content
+      .sidebar
+        block sidebar
+    footer
+      p Running on node with Express, Jade and Stylus
